@@ -1,13 +1,15 @@
-# Writing Good Documentation
+# Crafting Stellar Documentation
 
-## Step 1 - Using Codeblocks.
+## 1. Embrace the Power of Codeblocks
 
-Codeblocks in markdown make it *very easy* for tech people to **copy, paste, and share** code.
-A Good __Cloud Engineer__ uses Codeblocks whenever possible.
+Using codeblocks in markdown is not just helpful; it's a game-changer. It facilitates seamless **copying, pasting, and sharing** of code snippets. An adept Cloud Engineer knows the importance of incorporating Codeblocks regularly. 
 
-Because it allows others to copy and paste their code to replicate or research issues
+Why? Because it:
+- Makes it straightforward for peers to replicate or delve into issues.
+- Enhances readability and comprehension.
 
-In order to create code blocks in markdown you need to use three backticks(`)
+Here's how you create a codeblock in markdown using three backticks(```):
+
 ```
 import json
 import requests
@@ -15,18 +17,15 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-## Global Static Variables
+# Global Static Variables
 HOST = morpheus["morpheus"]["applianceHost"]
 INTERNAL_HOST = morpheus["customOptions"]["internalHost"]
 TOKEN = morpheus["morpheus"]["apiAccessToken"]
-AWS_KEY = morpheus["customOptions"]["awsKey"]
-AWS_SECRET = morpheus["customOptions"]["awsSecret"]
-AWS_VPC = morpheus["customOptions"]["awsVpc"]
-AWS_REGION = morpheus["customOptions"]["awsRegion"]
-INTERNAL_URL = "https://%s" % (INTERNAL_HOST)
+...
 ```
 
-- When you can, you should attempt to apply syntax highlighting to your codeblock
+And when you can, enhance your code with syntax highlighting:
+
 ```python
 import json
 import requests
@@ -34,73 +33,71 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-## Global Static Variables
-HOST = morpheus["morpheus"]["applianceHost"]
-INTERNAL_HOST = morpheus["customOptions"]["internalHost"]
-TOKEN = morpheus["morpheus"]["apiAccessToken"]
-AWS_KEY = morpheus["customOptions"]["awsKey"]
-AWS_SECRET = morpheus["customOptions"]["awsSecret"]
-AWS_VPC = morpheus["customOptions"]["awsVpc"]
-AWS_REGION = morpheus["customOptions"]["awsRegion"]
-INTERNAL_URL = "https://%s" % (INTERNAL_HOST)
+# Global Static Variables
+...
 ```
 
-## Adding Images
-You can display an image by adding ! and wrapping the alt text in [ ]. Alt text is a short text equivalent of the information in the image. Then, wrap the link for the image in parentheses ().
-### Example:
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+## 2. Incorporate Engaging Visuals
 
-If you need to resize an image, use the following:
+Add images to make your documentation more engaging. To do this:
+- Use `!` followed by alt text in `[]` (a short description of the image).
+- Then, wrap the image link in `()`.
+
+### Example:
+![Octocat smiling and raising a tentacle](https://myoctocat.com/assets/images/base-octocat.svg)
+
+If resizing is needed, adopt the following method:
 
 <img width="200px" src="https://myoctocat.com/assets/images/base-octocat.svg" />
 
-Good cloud Engineers use codeblocks for both Code and Errors that appear in the console.
+Remember, for an articulate documentation, use codeblocks not just for code but also for console errors:
 
 ```bash
 Traceback (most recent call last):
-2: from /usr/bin/irb:23:in '<main>'
-1: from (irb):1
+...
 RuntimeError: This is a custom error message
 ```
 
-> Here is an example of using a codeblock for an error that appears in bash.
+> An exemplar representation of an error using a bash codeblock.
 
-## Step 3 - Use Github Flavoured Task Lists
+## 3. Harness GitHub's Task Lists
 
-Github extends Markdown to have a list where you can check off items. <sup>[1]</sup>
-- [x] Finish Step 1
-- [ ] Finish Step 2
-- [x] Finish Step 3
+GitHub has enriched Markdown to include interactive task lists. Check them off as you progress!
 
-## Step 4 - Use Emojis (Optional)
+- [x] Achieved Step 1
+- [ ] In Progress: Step 2
+- [x] Accomplished Step 3
 
-GitHub Flavored Markdown (GFM) supports emoji shortcodes.
+## 4. Enliven with Emojis (Optional yet Fun!)
 
-Here are some examples:
-| Name | Shortcode | Emoji |
-| --- | --- | --- |
-| Cloud | `:cloud:` | :cloud: |
-| Cloud with lighting | `:cloud_with_lightning:` | 🌩️ |
+GitHub Flavored Markdown (GFM) introduces emoji shortcodes. A sprinkle of emojis can lighten up the documentation:
 
-## Step 5 - How to create a table
+| Description           | Shortcode                   | Emoji   |
+| --------------------- | --------------------------- | ------- |
+| Cloud                 | `:cloud:`                   | ☁️      |
+| Cloud with lightning  | `:cloud_with_lightning:`    | 🌩️     |
+
+## 5. Tables: Simplifying Data Representation
+
+To craft tables:
 
 ```md
-| Name | Shortcode | Emoji |
-| --- | --- | --- |
-| Cloud | `:cloud:` | :cloud: |
-| Cloud with lighting | `:cloud_with_lightning:` | 🌩️ |
+| Description           | Shortcode                   | Emoji   |
+| --------------------- | --------------------------- | ------- |
+| Cloud                 | `:cloud:`                   | ☁️      |
+| Cloud with lightning  | `:cloud_with_lightning:`    | 🌩️     |
 ```
-Github extends the functionality of Markdown tables to provide more alignment and table cell formatting options. [<sup>[2]</sup>](#external-references)
 
-- Make note of where the pipe keyboard key is located.
-- It should appear above return or enter key
-- but it may vary based on your keyboard layout.
+Remember:
+- The `|` key is typically above the Return or Enter key.
+- However, it might differ depending on your keyboard layout.
 
-![Photo of the pipe character on our keyboard](assets/pipe-char.jpg)
+![RedHat Logo](/assets/redhat-icon.svg)
 
-[Secret Window Hidden Garden](secret-window/hidden-garden.md)
+![Morpheus Logo](/assets/morpheus-logo-v2.svg)
 
-## References
-- [GitHub Flavored Markdown Spec](https://github.github.com/gfm/).
-- [Basic writing and formatting syntax (Github Flavored Markdown)](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting=syntax#quoting-text).
-- [GFM - Tasks Lists](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#task-lists).<sup>[1]</sup>
+## Essential References
+
+- [GitHub's Official Flavored Markdown Guide](https://github.github.com/gfm/).
+- [A Comprehensive Writing and Formatting Syntax by GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting=syntax#quoting-text).
+- [GitHub's Task List Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#task-lists).<sup>[1]</sup>
